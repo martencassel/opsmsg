@@ -1,0 +1,17 @@
+- id: TODO001
+  severity: INFO
+  text: "Todo item created successfully"
+  help: "Cause: User submitted valid todo payload. Recovery: None required."
+  replies: []
+
+- id: TODO002
+  severity: ERROR
+  text: "Failed to create todo item"
+  help: "Cause: Invalid payload or DB error. Recovery: Validate input or check DB connectivity."
+  replies: []
+
+- id: TODO003
+  severity: WARN
+  text: "Todo item not found"
+  help: "Cause: Requested todo ID does not exist. Recovery: Ensure correct ID or create new item."
+  replies: []

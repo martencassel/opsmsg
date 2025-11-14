@@ -1,0 +1,48 @@
+# Sample messages for the viewer demo
+- id: APP001
+  severity: INFO
+  text: "Application initialized successfully"
+  help: "Cause: Application startup completed. Recovery: None required."
+  replies: []
+
+- id: APP002
+  severity: WARN
+  text: "Memory usage exceeded 80% threshold"
+  help: "Cause: High memory consumption detected. Recovery: Monitor application for memory leaks, consider scaling resources."
+  replies: []
+
+- id: APP003
+  severity: ERROR
+  text: "Failed to process batch job {job_id}"
+  help: "Cause: Batch processing encountered an error. Recovery: Check job logs, verify input data, and retry."
+  replies: []
+
+- id: APP004
+  severity: CRITICAL
+  text: "Data corruption detected in {table_name}"
+  help: "Cause: Database integrity check failed. Recovery: Restore from backup immediately and investigate root cause."
+  replies: []
+
+- id: NET001
+  severity: INFO
+  text: "Network connection established to {host}"
+  help: "Cause: Successfully connected to remote host. Recovery: None required."
+  replies: []
+
+- id: NET002
+  severity: ERROR
+  text: "Connection timeout to {host}:{port}"
+  help: "Cause: Remote host did not respond within timeout period. Recovery: Verify host availability, check firewall rules, increase timeout."
+  replies: []
+
+- id: API001
+  severity: INFO
+  text: "API rate limit: {current}/{limit} requests"
+  help: "Cause: Normal API usage tracking. Recovery: None required."
+  replies: []
+
+- id: API002
+  severity: WARN
+  text: "API rate limit approaching for client {client_id}"
+  help: "Cause: Client is nearing rate limit threshold. Recovery: Notify client to reduce request frequency."
+  replies: []

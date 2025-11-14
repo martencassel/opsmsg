@@ -1,0 +1,107 @@
+# -------------------------
+# Server lifecycle messages
+# -------------------------
+- id: SRV001
+  severity: INFO
+  text: "Server starting on port {port}"
+  help: "Cause: Application startup initiated. Recovery: None required."
+  replies: []
+
+- id: SRV002
+  severity: ERROR
+  text: "Failed to bind to port {port}"
+  help: "Cause: Port already in use or insufficient privileges. Recovery: Stop the conflicting process or choose another port."
+  replies: []
+
+- id: SRV003
+  severity: CRITICAL
+  text: "Configuration missing or invalid"
+  help: "Cause: Required configuration values not found or invalid format. Recovery: Verify environment variables, config files, and restart."
+  replies: []
+
+- id: SRV004
+  severity: INFO
+  text: "Server shutdown initiated"
+  help: "Cause: Application received shutdown signal. Recovery: None required."
+  replies: []
+
+- id: SRV005
+  severity: INFO
+  text: "Server shutdown completed"
+  help: "Cause: Application terminated gracefully. Recovery: None required."
+  replies: []
+
+# -------------------------
+# Dependency messages
+# -------------------------
+- id: DEP001
+  severity: INFO
+  text: "Database connection established"
+  help: "Cause: Database connection successful. Recovery: None required."
+  replies: []
+
+- id: DEP002
+  severity: ERROR
+  text: "Database connection failed"
+  help: "Cause: Database unreachable or credentials invalid. Recovery: Check DB host, port, credentials, and network connectivity."
+  replies: []
+
+- id: DEP003
+  severity: WARN
+  text: "Cache service unavailable, using fallback"
+  help: "Cause: Cache service not responding. Recovery: Investigate cache service health; fallback may impact performance."
+  replies: []
+
+- id: DEP004
+  severity: INFO
+  text: "OIDC provider initialized"
+  help: "Cause: Identity provider configuration loaded successfully. Recovery: None required."
+  replies: []
+
+- id: DEP005
+  severity: ERROR
+  text: "OIDC provider unreachable"
+  help: "Cause: Identity provider endpoint not responding. Recovery: Verify network connectivity and IdP availability."
+  replies: []
+
+# -------------------------
+# Runtime & request handling
+# -------------------------
+- id: RTE001
+  severity: ERROR
+  text: "Unhandled panic in request handler"
+  help: "Cause: Unexpected runtime error occurred. Recovery: Inspect stack trace, fix code, and add error handling."
+  replies: []
+
+- id: RTE002
+  severity: WARN
+  text: "Slow response detected for {endpoint}"
+  help: "Cause: Request exceeded performance threshold. Recovery: Investigate endpoint performance, optimize queries or handlers."
+  replies: []
+
+- id: RTE003
+  severity: INFO
+  text: "Request completed successfully"
+  help: "Cause: Request processed without errors. Recovery: None required."
+  replies: []
+
+# -------------------------
+# Security & auth
+# -------------------------
+- id: SEC001
+  severity: WARN
+  text: "Unauthorized access attempt detected"
+  help: "Cause: Client attempted access without valid credentials. Recovery: Review logs for suspicious activity."
+  replies: []
+
+- id: SEC002
+  severity: ERROR
+  text: "Token validation failed"
+  help: "Cause: Provided token invalid or expired. Recovery: Ensure client refreshes token or re‑authenticates."
+  replies: []
+
+- id: SEC003
+  severity: INFO
+  text: "User authenticated successfully"
+  help: "Cause: Authentication completed with valid credentials. Recovery: None required."
+  replies: []
